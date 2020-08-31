@@ -1,8 +1,8 @@
 [] - create button that generates
-    [] - append a div, a new div each time the button is clicked
+    [x] - append a div, a new div each time the button is clicked
     [] - inside div, create <p> tag that counts
-    [] - within div, create 2 buttons (yellow, delete)
-    [] - div that is generated, turn red on creation
+    [x] - within div, create 2 buttons (yellow, delete)
+    [x] - div that is generated, turn red on creation
 
 [] - yellow button
     [] - change background-color to yellow

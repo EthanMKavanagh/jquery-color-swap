@@ -1,26 +1,37 @@
 $( document ).ready( onReady );
 
-//Global Variables
-let incrementing = 1;
-incrementing++;
-
 function onReady(){
     $( document ).on( 'click', '.generateBtn', generate );
-    $( document ).on( 'click', 'yellowBtn', backgroundYellow );
+    $( document ).on( 'click', '.yellowBtn', backgroundYellow );
+    $( document ).on( 'click', '.removeBtn', removeDiv );
 } // end onReady
 
 function generate(){
     console.log( 'in generate' );
-    $( '.block' ).css( 'background-color', 'red' );
     $( '.block' ).append(`
-        <p></p>
-        <button class="yellowBtn">Yellow</button>
-        <button class="removeBtn">Remove</button>
+        <div class="div">
+            <p class="count"></p>
+            <button class="yellowBtn">Yellow</button>
+            <button class="removeBtn">Remove</button>
+        </div>
     `)
+    $( '.div' ).css( 'background-color', 'red' );
 
     incrementing();
 } // end generate
 
+
 function backgroundYellow(){
-    $( '.block' ).css( 'background-color', 'yellow' );
+    $( '.div' ).css( 'background-color', 'yellow' );
 } // end backgroundYellow
+
+
+let number = 0;
+function incrementing(){
+    number++;
+    $( '.count' ).append( number )
+} // end incrementing
+
+function removeDiv(){
+    $( '.div' ).remove();
+} // end removeDiv
